@@ -1,0 +1,22 @@
+{
+  "name": "promo-calendar",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Marketplace promotion calendar for Menina Step — Mirakl promotions, US retail dates, newsletters",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "check:mirakl": "node scripts/check-mirakl.js",
+    "list:promos": "node scripts/list-promotions.js"
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.5.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "node-cron": "^3.0.3"
+  }
+}

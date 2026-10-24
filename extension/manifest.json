@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Promo Calendar Sync",
+  "version": "1.0.0",
+  "description": "Sends Mirakl Marketplace campaigns to the Menina Promo Calendar whenever you open a Promotions page.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://*.mirakl.net/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    { "matches": ["https://*.mirakl.net/*"], "js": ["content.js"], "run_at": "document_idle" }
+  ],
+  "options_page": "options.html",
+  "action": { "default_title": "Promo Calendar Sync", "default_popup": "options.html" }
+}
